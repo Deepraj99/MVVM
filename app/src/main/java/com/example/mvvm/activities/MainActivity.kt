@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         mainViewModel = ViewModelProvider(this, MainViewModelFactory(quoteRepository))[MainViewModel::class.java]
 
         mainViewModel.quotes.observe(this, Observer {
-            Log.d("DEEPAK", it.toString())
+            Log.d("DEEPAK", it.results.size.toString())
         })
     }
 }
